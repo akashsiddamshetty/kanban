@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Primary */
+  --color-primary-500: #635FC7;
+  --color-primary-300: #A8A4FF;
+
+  /* Dark */
+  --color-dark-950: #000112;
+  --color-dark-900: #20212C;
+  --color-dark-800: #2B2C37;
+  --color-dark-700: #3E3F4E;
+
+  /* Gray */
+  --color-gray-500: #828FA3;
+  --color-gray-100: #E4EBFA;
+  --color-gray-50: #F4F7FD;
+
+  /* Base */
+  --color-white: #FFFFFF;
+
+  /* Error */
+  --color-red-500: #EA5555;
+  --color-red-300: #FF9898;
+
+  /* Font Family */
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  /* Font Sizes */
+  --text-heading-xl: 1.5rem;     /* 24px */
+  --text-heading-l: 1.125rem;    /* 18px */
+  --text-heading-m: 0.9375rem;   /* 15px */
+  --text-heading-s: 0.75rem;     /* 12px */
+
+  --text-body-l: 0.8125rem;      /* 13px */
+  --text-body-m: 0.75rem;        /* 12px */
+
+  /* Line Heights */
+  --leading-heading-xl: 1.875rem; /* 30px */
+  --leading-heading-l: 1.4375rem; /* 23px */
+  --leading-heading-m: 1.1875rem; /* 19px */
+  --leading-heading-s: 0.9375rem; /* 15px */
+
+  --leading-body-l: 1.4375rem;    /* 23px */
+  --leading-body-m: 0.9375rem;    /* 15px */
+
+  /* Letter Spacing */
+  --tracking-heading-s: 0.15rem; /* 2.4px */
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
