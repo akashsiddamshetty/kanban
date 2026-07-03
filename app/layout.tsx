@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
-
+import { AppProviders } from "@/context/AppProviders";
+import { ShowSideBarButton } from "@/components/ShowSideBarButton";
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Kanban Task Management Web App",
@@ -37,7 +37,11 @@ export default function RootLayout({
       lang="en"
       className={`h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <AppProviders>{children}
+          <ShowSideBarButton/>
+        </AppProviders>
+      </body>
     </html>
   );
 }

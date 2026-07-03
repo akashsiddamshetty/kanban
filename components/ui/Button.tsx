@@ -13,13 +13,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles = {
   primary:
-    "bg-primary-500 text-white hover:bg-primary-300 disabled:bg-primary-300",
+    "bg-primary-500 text-white hover:bg-primary-300 hover:cursor-pointer disabled:bg-primary-300",
   secondary:
     "bg-gray-100 text-primary-500 hover:bg-primary-300/20 disabled:opacity-50",
   destructive:
     "bg-red-500 text-white hover:bg-red-300 disabled:bg-red-300",
   ghost:
-    "bg-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50",
+    "bg-transparent text-gray-500 gap-0 hover:bg-gray-100 disabled:opacity-50",
 };
 
 const sizeStyles = {
@@ -50,9 +50,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || loading}
         className={twMerge(
           clsx(
-            "inline-flex items-center justify-center gap-2 rounded-full font-bold transition-colors duration-200",
-            "focus:outline-none focus:ring-2 focus:ring-primary-500",
-            variantStyles[variant],
+            "inline-flex items-center justify-center gap-2 rounded-full font-bold transition-colors duration-200",            variantStyles[variant],
             sizeStyles[size],
             fullWidth && "w-full",
             (disabled || loading) && "cursor-not-allowed",
